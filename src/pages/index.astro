@@ -1,9 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Bento from '../components/Bento.astro'
+// Supports weights 100-900
+import '@fontsource-variable/montserrat'
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>Asadero Palacio</main>
+<Layout
+	title="Asadero Palacio Dúrcal - Más de 20 años ofreciendo el mejor servicio de comdida para llevar"
+	description="Pollos asados y comida casera para llevar en Dúrcal. Más de 20 años ofreciendo el mejor servicio de comida para llevar en Dúrcal."
+>
+	<main>
+		<Bento />
+	</main>
 </Layout>
 
-<style></style>
+<style is:global>
+	html {
+		list-style: none;
+
+		font-family: sans-serif;
+		color-scheme: light dark;
+	}
+	body {
+		font-family: 'Montserrat Variable', sans-serif;
+	}
+</style>
