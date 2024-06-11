@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro'
 import Bento from '../components/Bento.astro'
 // Supports weights 100-900
-import '@fontsource-variable/montserrat'
 ---
 
 <Layout
@@ -13,15 +12,3 @@ import '@fontsource-variable/montserrat'
 		<Bento />
 	</main>
 </Layout>
-
-<style is:global>
-	html {
-		list-style: none;
-
-		font-family: sans-serif;
-		color-scheme: light dark;
-	}
-	body {
-		font-family: 'Montserrat Variable', sans-serif;
-	}
-</style>

@@ -1,24 +1,69 @@
 ---
+import PhoneIcon from 'lib/icons/PhoneIcon.astro'
+import productsJson from '@data/products.json'
 import BentoItem from './BentoItem.astro'
+
+import HotChocolate from 'lib/icons/hotChocolate.astro'
+import NewIcon from 'lib/icons/new.astro'
+
+const products = productsJson
 ---
 
 <section
-	class="mx-auto grid w-full max-w-[1400px] auto-rows-[25rem] grid-cols-10 gap-4 p-20"
+	class="mx-auto grid w-full max-w-[2560px] grid-cols-10 gap-4 p-5 sm:auto-rows-[25rem] sm:p-20"
 >
 	<BentoItem
 		class="col-span-10 md:col-span-4"
 		title="NOVEDADES"
-	/>
+	>
+		<NewIcon slot="icon" />
+		<ul class="text-center">
+			<li>¡Nuevos productos!</li>
+			<li>¡Nuevos sabores!</li>
+			<li>¡Nuevas promociones!</li>
+		</ul>
+	</BentoItem>
 	<BentoItem
-		class="col-span-10 md:col-span-6"
+		transition:name="productos"
+		class="col-span-10 overflow-hidden bg-slate-500 md:col-span-6"
 		title="PRODUCTOS"
-	/>
+	>
+		<ul class="grid grid-cols-2 gap-1 p-5 lg:grid-cols-3">
+			{
+				products.map((product) => (
+					<a href={`/productos/${product.id.toString()}`}>
+						<li class="hover:text-red-400">
+							{product.name}
+						</li>
+					</a>
+				))
+			}
+		</ul>
+	</BentoItem>
+
 	<BentoItem
 		class="col-span-10 md:col-span-6"
 		title="CHURROS Y CHOCOLATE"
-	/>
+	>
+		<HotChocolate slot="icon" />
+		<img
+			class={'rounded-lg sm:flex-none'}
+			width="250"
+			src="/images/churros.webp"
+			alt="Fotografia de una persona haciendo churros"
+		/>
+	</BentoItem>
 	<BentoItem
-		class="col-span-10 md:col-span-4"
-		title="Extra"
-	/>
+		class="col-span-10 h-full bg-slate-500 text-center md:col-span-4"
+		title="ENCARGA TU PEDIDO!"
+	>
+		<p class="mb-5 text-xl">
+			¡Haz tu pedido con anticipación!
+		</p>
+
+		<p class="text-xl">¡Llamenos al</p>
+		<p class="flex justify-center gap-2 font-bold">
+			958 78 13 60! <PhoneIcon />
+		</p>
+	</BentoItem>
 </section>

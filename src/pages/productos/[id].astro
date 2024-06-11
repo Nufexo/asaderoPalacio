@@ -1,0 +1,69 @@
+---
+import products from '@data/products.json'
+import Layout from '@layouts/Layout.astro'
+import BentoItem from '@components/BentoItem.astro'
+import { type GetStaticPaths } from 'astro'
+
+const { id } = Astro.params
+
+const product = products.find(
+	(product) => product.id.toString() === id
+)
+
+export const getStaticPaths = (() => {
+	const params = products.map((product) => ({
+		params: { id: product.id.toString() },
+	}))
+	return params
+}) satisfies GetStaticPaths
+---
+
+<Layout
+	title={`Asadero Palacio - ${product?.name}`}
+	description={`${product?.description}`}
+>
+	<div class="mx-auto mt-5 w-5/6 p-5">
+		<section class="grid grid-cols-6 gap-4">
+			<BentoItem
+				title=`${product?.name}`
+				class="col-span-full lg:col-span-3"
+			>
+				<div class="mt-5 flex gap-5">
+					<picture class="p-2">
+						<img
+							class="rounded"
+							src="https://imgs.search.brave.com/l9verGOCplrs0qoBFXPtFvIvyGGDwthV7nABE8Otpg0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWct/Z2xvYmFsLmNwY2Ru/LmNvbS9yZWNpcGVz/L2RlMzQ5NDAwYTYw/MTY3NTkvMzAweDIy/MGNxNzAvbXVzbGl0/b3MtZGUtcG9sbG8t/cmVsbGVub3MtZm90/by1wcmluY2lwYWwu/anBn"
+							alt=`Imagen de ${product?.name}`
+						/>
+					</picture>
+					<aside class="">
+						<h5 class="font-bold">{product?.price} €</h5>
+						<h6>Alergenos</h6>
+						<p>{product?.description}</p>
+					</aside>
+				</div>
+			</BentoItem>
+
+			<BentoItem
+				transition:name="productos"
+				title="Productos"
+				class="col-span-full overflow-auto text-center lg:col-span-3"
+			>
+				<ul
+					id="lista-productos"
+					class="mt-3 grid grid-cols-2"
+				>
+					{
+						products.map((product) => (
+							<a
+								href={`/productos/${product.id.toString()}/#lista-productos`}
+							>
+								<li>{product.name}</li>
+							</a>
+						))
+					}
+				</ul>
+			</BentoItem>
+		</section>
+	</div>
+</Layout>

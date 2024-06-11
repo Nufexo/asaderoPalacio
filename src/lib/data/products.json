@@ -1,0 +1,122 @@
+[
+	{
+		"id": 1,
+		"name": "Organic Red Apple",
+		"price": 1.99,
+		"image": "https://example.com/images/red-apple.jpg",
+		"category": "Fruit",
+		"description": "Fresh organic red apples, perfect for snacking."
+	},
+	{
+		"id": 2,
+		"name": "Whole Wheat Bread",
+		"price": 2.49,
+		"image": "https://example.com/images/whole-wheat-bread.jpg",
+		"category": "Bakery",
+		"description": "Healthy whole wheat bread made with organic ingredients."
+	},
+	{
+		"id": 3,
+		"name": "Cheddar Cheese",
+		"price": 4.99,
+		"image": "https://example.com/images/cheddar-cheese.jpg",
+		"category": "Dairy",
+		"description": "Sharp cheddar cheese with a rich, tangy flavor."
+	},
+	{
+		"id": 4,
+		"name": "Free-Range Chicken Breast",
+		"price": 7.99,
+		"image": "https://example.com/images/chicken-breast.jpg",
+		"category": "Meat",
+		"description": "Juicy, tender free-range chicken breasts."
+	},
+	{
+		"id": 5,
+		"name": "Fresh Broccoli",
+		"price": 1.49,
+		"image": "https://example.com/images/fresh-broccoli.jpg",
+		"category": "Vegetable",
+		"description": "Crisp and fresh broccoli, perfect for steaming or salads."
+	},
+	{
+		"id": 6,
+		"name": "Greek Yogurt",
+		"price": 3.99,
+		"image": "https://example.com/images/greek-yogurt.jpg",
+		"category": "Dairy",
+		"description": "Thick and creamy Greek yogurt, rich in protein."
+	},
+	{
+		"id": 7,
+		"name": "Almond Milk",
+		"price": 2.99,
+		"image": "https://example.com/images/almond-milk.jpg",
+		"category": "Beverage",
+		"description": "Smooth and creamy almond milk, perfect for smoothies."
+	},
+	{
+		"id": 8,
+		"name": "Granola",
+		"price": 4.49,
+		"image": "https://example.com/images/granola.jpg",
+		"category": "Cereal",
+		"description": "Crunchy granola with nuts and dried fruits."
+	},
+	{
+		"id": 9,
+		"name": "Wild Salmon Fillet",
+		"price": 12.99,
+		"image": "https://example.com/images/salmon-fillet.jpg",
+		"category": "Seafood",
+		"description": "Fresh wild-caught salmon fillet, rich in omega-3."
+	},
+	{
+		"id": 10,
+		"name": "Spaghetti Pasta",
+		"price": 1.29,
+		"image": "https://example.com/images/spaghetti-pasta.jpg",
+		"category": "Pantry",
+		"description": "Classic spaghetti pasta, perfect for Italian dishes."
+	},
+	{
+		"id": 11,
+		"name": "Tomato Basil Sauce",
+		"price": 3.49,
+		"image": "https://example.com/images/tomato-basil-sauce.jpg",
+		"category": "Pantry",
+		"description": "Rich and flavorful tomato basil sauce."
+	},
+	{
+		"id": 12,
+		"name": "Avocado",
+		"price": 1.79,
+		"image": "https://example.com/images/avocado.jpg",
+		"category": "Fruit",
+		"description": "Creamy and ripe avocado, great for salads and toast."
+	},
+	{
+		"id": 13,
+		"name": "Carrots",
+		"price": 0.99,
+		"image": "https://example.com/images/carrots.jpg",
+		"category": "Vegetable",
+		"description": "Fresh and crunchy carrots, perfect for snacking or cooking."
+	},
+	{
+		"id": 14,
+		"name": "Organic Eggs",
+		"price": 3.69,
+		"image": "https://example.com/images/organic-eggs.jpg",
+		"category": "Dairy",
+		"description": "Organic eggs from free-range hens."
+	},
+	{
+		"id": 15,
+		"name": "Quinoa",
+		"price": 4.99,
+		"image": "https://example.com/images/quinoa.jpg",
+		"category": "Pantry",
+		"description": "Nutritious quinoa, a great source of protein and fiber."
+	}
+]

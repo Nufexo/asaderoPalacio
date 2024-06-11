@@ -1,5 +1,7 @@
 ---
-import Header from '../components/Header.astro'
+import Header from '@components/Header.astro'
+import { ViewTransitions } from 'astro:transitions'
+import '@fontsource-variable/montserrat'
 
 interface Props {
 	title: string
@@ -15,15 +17,29 @@ const { title, description } = Astro.props
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
+
 		<link
 			rel="icon"
 			type="image/svg+xml"
 			href="/images/logo.webp"
 		/>
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<Header />
 		<slot />
+		<style is:global>
+			html {
+				list-style: none;
+				font-family: sans-serif;
+				color-scheme: light dark;
+			}
+
+			body {
+				background: #232323;
+				font-family: 'Montserrat Variable', sans-serif;
+			}
+		</style>
 	</body>
 </html>

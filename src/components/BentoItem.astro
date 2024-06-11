@@ -1,18 +1,20 @@
 ---
 interface Props {
 	class?: string
-
 	title: string
 }
+
 const { title } = Astro.props
 ---
 
 <article
-	class={`${Astro.props.class} relative col-span-5 rounded-xl border border-white/10 shadow-inner shadow-white/10 backdrop-blur-md`}
+	class={`${Astro.props.class} relative  rounded-xl border border-white/10 shadow-inner shadow-white/10 backdrop-blur-md`}
 >
-	<slot name="image" />
-	<div class="flex select-none flex-col gap-1 p-6">
-		<h2 class="text-balance text-3xl font-bold">{title}</h2>
-		<slot name="content" />
+	<div class="flex justify-center gap-3 p-5">
+		<h2 class="text-3xl font-bold">
+			{title}
+		</h2>
+		<slot name="icon" />
 	</div>
+	<slot />
 </article>
